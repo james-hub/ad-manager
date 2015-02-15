@@ -1,0 +1,106 @@
+/*/////////////////////////////////////////////////////////////////////////////
+/// Name: AdManager															///
+/// Version: 3.0															///
+/// Author: Allembru														///
+/// Website: <http://www.allembru.com/>										///
+/// Credits: jQuery <http://jquery.com/>, Fancybox <http://fancybox.net/>,	///
+///			 jQuery Cycle <http://jquery.malsup.com/cycle/>,				///
+///			 Tutorialzine <http://tutorialzine.com/>						///
+///////////////////////////////////////////////////////////////////////////////
+/// AdManager v3.0 Ad Management Solution									///
+/// Copyright (C) 2012  Allembru											///
+///																			///
+/// This program is free software: you can redistribute it and/or modify	///
+/// it under the terms of the GNU General Public License as published by	///
+/// the Free Software Foundation, either version 3 of the License.			///
+///																			///
+/// This program is distributed in the hope that it will be useful,			///
+/// but WITHOUT ANY WARRANTY; without even the implied warranty of			///
+/// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			///
+/// GNU General Public License for more details.							///
+///																			///
+/// You should have received a copy of the GNU General Public License		///
+/// along with this program.  If not, see <http://www.gnu.org/licenses/>	///
+/////////////////////////////////////////////////////////////////////////////*/
+
+@charset "utf-8";
+
+body { font-family:Verdana, Geneva, sans-serif;	font-size:11px; }
+.clear { clear:both; }
+.clearr { clear:right; }
+.clearl { clear:left; }
+
+#logo {	display:block; width:900px;	margin:10px auto 25px auto; height:58px; background-image:url(../img/logo.png); background-repeat:no-repeat; }
+#main {	display:block; width:900px;	margin:0px auto 0px auto; }
+
+.campaign, .ad { display:block;	position:relative; height:25px;	line-height:25px; border-bottom:1px solid #FFF; }
+.campaign {	background-color:#333333; color:#FFF; padding:5px; font-weight:bold; }
+.campaign:hover { background-color:#666; }
+
+.ad { background-color:#CCC; color:#333; padding:2px 10px 2px 10px; }
+.ad:hover {	background-color:#999; }
+
+.action { display:block; float:right; width:23px; height:23px; background-image:url(../img/icons.png); background-repeat:no-repeat; margin:0px 3px 0px 3px; cursor:pointer; }
+.action.empty { background-image:none; cursor:default; }
+.cNew { background-position: -6px -6px; }
+.cNew:hover { background-position: -6px -4px; }
+.logout { background-position: -64px -122px; }
+.logout:hover { background-position: -64px -120px; }
+.help { background-position: -180px -35px; }
+.help:hover { background-position: -180px -33px; }
+.aNew { background-position: -6px -151px; }
+.aNew:hover { background-position: -6px -149px; }
+.aImport { background-position: -209px -93px; }
+.aImport:hover { background-position: -209px -91px; }
+.aImportSub a { color:#FFF; }
+.aImportSub { display:none; text-align:right; }
+.aPreview, .aPreviewClose { background-position: -267px -35px; }
+.aPreview:hover,  .aPreviewClose:hover { background-position: -267px -33px; }
+.cEdit, .aEdit, .settings { background-position: -93px -122px; }
+.cEdit:hover, .aEdit:hover, .settings:hover { background-position: -93px -120px; }
+.cDelete, .aDelete { background-position: -238px -122px; }
+.cDelete:hover, .aDelete:hover { background-position: -238px -120px; }
+.cCode, .cCodeClose { background-position: -238px -151px; }
+.cCode:hover, .cCodeClose:hover { background-position: -238px -149px; }
+.sortUp { background-position: -150px -31px; }
+.sortUp:hover { background-position: -150px -29px; }
+.sortDown { background-position: -150px -31px; -moz-transform: scaleY(-1); -o-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1); filter: FlipV; -ms-filter: "FlipV"; }
+.sortDown:hover { background-position: -150px -33px; }
+
+form{ border:solid 2px #b7ddf2; background:#ebf4fb; margin:10px auto 10px auto; padding:10px; }
+form h1 { font-size:14px; font-weight:bold; margin-bottom:20px; }
+form p{ font-size:11px; color:#666666; margin-bottom:20px; border-bottom:solid 1px #b7ddf2; padding-bottom:10px; }
+form label{ clear:both; display:block; font-weight:bold; text-align:right; width:200px; float:left; }
+form .inner { display:block; width:500px; margin:0px auto 0px auto; }
+form .small{ color:#666666; display:block; font-size:11px; font-weight:normal; text-align:right; width:200px; }
+form input{ float:left; font-size:12px; padding:4px 2px; border:solid 1px #aacfe4; width:200px; margin:2px 0 20px 10px; }
+form textarea { float:left; font-size:12px; padding:4px 2px; border:solid 1px #aacfe4; width:260px; height:300px; margin:2px 0 20px 10px; }
+form select{ float:left; font-size:12px; padding:4px 2px; border:solid 1px #aacfe4; width:200px; margin:2px 0 20px 10px; }
+form button{ clear:both; margin-left:210px; width:125px; height:31px; background:#666666 url(img/button.png) no-repeat; text-align:center; line-height:31px; color:#FFFFFF; font-size:11px; font-weight:bold; }
+form #confirmButtons { clear:both; padding: 25px 0 25px; text-align: center; }
+form .button { background: url("../js/confirm/buttons.png") no-repeat scroll 0 0 transparent; border: medium none; color: white; display: inline-block; font: 17px/33px 'Cuprum','Lucida Sans Unicode','Lucida Grande',sans-serif; height: 33px; margin-right: 15px; padding: 0 35px 0 40px; position: relative; text-decoration: none; }
+form .button:last-child { margin-right: 0; }
+form .button span { background: url("../js/confirm/buttons.png") no-repeat scroll 0 0 transparent; height: 33px; position: absolute; right: -5px; top: 0; width: 5px; }
+form .blue { background-position: left top; text-shadow: 1px 1px 0 #5889A2; }
+form .blue span { background-position: -195px 0; }
+form .blue:hover { background-position: left bottom; }
+form .blue:hover span { background-position: -195px bottom; }
+form .gray { background-position: -200px top; text-shadow: 1px 1px 0 #707070; }
+form .gray span { background-position: -395px 0; }
+form .gray:hover { background-position: -200px bottom; }
+form .gray:hover span { background-position: -395px bottom; }
+
+#sample { display:block; position:absolute; top:0px; left:450px; width:220px; height:220px; border:1px solid #000; }
+#sample div { width:220px; height:220px; }
+.red { background-color:red; }
+.orange { background-color:orange; }
+.yellow { background-color:yellow; }
+.green { background-color:green; }
+.blue { background-color:blue; }
+.indigo { background-color:indigo; }
+.violet { background-color:violet; }
+
+#modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; height: 100%; width: 100%; background: rgba( 0, 0, 0, .8 ) url('../img/ajax-loader.gif') 50% 50% no-repeat; }
+#modal .modalinner { display:block; position:fixed; width:400px; top: 50%; left:50%; text-align:left; color:#FFF; font-size:12px; font-family:Verdana, Geneva, sans-serif; margin:-11px 0px 0px 40px; padding:0px; }
+body.loading { overflow: hidden; }
+body.loading #modal { display: block; }
